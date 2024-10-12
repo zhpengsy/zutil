@@ -9,7 +9,7 @@ import (
 )
 
 // 读取文本文件的每一行
-func readLines(filePath string) ([]string, error) {
+func ReadLines(filePath string) ([]string, error) {
 	file, err := os.Open(filePath)
 	if err != nil {
 		return nil, err
@@ -25,7 +25,7 @@ func readLines(filePath string) ([]string, error) {
 }
 
 // 复制文件
-func copyFile(src, dest string) error {
+func CopyFile(src, dest string) error {
 	inputFile, err := os.Open(src)
 	if err != nil {
 		return err
@@ -49,7 +49,7 @@ func copyFile(src, dest string) error {
 }
 
 // 压缩目录
-func zipDir(srcDir, zipFilePath string) error {
+func ZipDir(srcDir, zipFilePath string) error {
 	zipFile, err := os.Create(zipFilePath)
 	if err != nil {
 		return err
